@@ -9,10 +9,10 @@ class WallServiceTest {
     @Test
     fun updatePost() {
         val service = WallService()
-        service.add(Post(id = 1, text = "Какой-то текст"))
-        service.add(Post(id = 1, text = "2-ой какой-то текст"))
-        service.add(Post(id = 2, text = "3-ий какой-то текст"))
-        val update = Post(id = 1, text = "Его мы поменяли")
+        service.add(Post(id = 1, text = "РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        service.add(Post(id = 1, text = "2-РѕР№ РєР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        service.add(Post(id = 2, text = "3-РёР№ РєР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        val update = Post(id = 1, text = "Р•РіРѕ РјС‹ РїРѕРјРµРЅСЏР»Рё")
         val result = service.update(update)
         assertTrue(result)
     }
@@ -20,10 +20,10 @@ class WallServiceTest {
     @Test
     fun noUpdatePost() {
         val service = WallService()
-        service.add(Post(id = 1, text = "Какой-то текст"))
-        service.add(Post(id = 1, text = "2-ой какой-то текст"))
-        service.add(Post(id = 2, text = "3-ий какой-то текст"))
-        val update = Post(id = 6, text = "Его мы поменяли")
+        service.add(Post(id = 1, text = "РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        service.add(Post(id = 1, text = "2-РѕР№ РєР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        service.add(Post(id = 2, text = "3-РёР№ РєР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        val update = Post(id = 6, text = "Р•РіРѕ РјС‹ РїРѕРјРµРЅСЏР»Рё")
         val result = service.update(update)
         assertFalse(result)
     }
@@ -31,8 +31,8 @@ class WallServiceTest {
     @Test
     fun addPost() {
         val service = WallService()
-        val postId = service.add(Post(id = 1, text = "Какой-то текст"))
-        val postId1 = service.add(Post(id = 2, text = "Какой-то текст ewrwer"))
+        val postId = service.add(Post(id = 1, text = "РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+        val postId1 = service.add(Post(id = 2, text = "РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚ ewrwer"))
         assertEquals(1, postId1.id)
     }
 }

@@ -2,8 +2,8 @@ import org.junit.Assert.*
 
 fun main() {
     val service = WallService()
-    val postId = service.add(Post(id = 1, text = "Какой-то текст"))
-    val postId1 = service.add(Post(id = 2, text = "Какой-то текст ewrwer"))
+    val postId = service.add(Post(id = 1, text = "РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚"))
+    val postId1 = service.add(Post(id = 2, text = "РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚ ewrwer"))
     println(postId)
     println(postId1)
 }
